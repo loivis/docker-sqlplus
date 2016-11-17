@@ -1,6 +1,6 @@
-# docker-sqlplus
-docker image for oracle sqlplus with instant client
+# Oracle SQL*Plus
+docker image for oracle SQL*Plus with instant client
 
 ```
-docker run -e URL=user/passwd@//host:1521/SID -it loivis/sqlplus
+docker run --rm -it loivis/sqlplus user/passwd@//host:1521/SID
 ```
