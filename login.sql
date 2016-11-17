@@ -5,7 +5,7 @@
 --
 
 -- First set the database date format to show the time.
-ALTER SESSION SET nls_date_format = 'YYYY-mm-dd HH:MI:SS';
+ALTER SESSION SET nls_date_format = 'YYYY-mm-dd HH24:MI:SS';
 
 -- SET the SQLPROMPT to include the _USER, _CONNECT_IDENTIFIER
 SET SQLPROMPT "_USER'@'_CONNECT_IDENTIFIER> "
@@ -20,3 +20,6 @@ SET LINESIZE 200
 SET NUMFORMAT 999,999,999
 
 SET SERVEROUTPUT ON
+
+-- set common column format
+column filename format a30
