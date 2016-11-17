@@ -11,7 +11,7 @@ case "$1" in
     sqlplus --help
     ;;
   *)
-    sleep 1s;
+    sleep 0.1s;
     rlwrap sqlplus $@
     ;;
 esac
