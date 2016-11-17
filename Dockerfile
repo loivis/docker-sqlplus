@@ -18,12 +18,7 @@ RUN unzip /opt/instantclient-basic-linux.x64-${VERSION}.zip \
  && mv -v /opt/instantclient* /opt/instantclient
 
 COPY login.sql /opt/instantclient
-# COPY login.sql /opt/instantclient/glogin.sql
-
-ENV LD_LIBRARY_PATH /opt/instantclient
-ENV PATH /opt/instantclient:$PATH
-ENV SQLPATH /opt/instantclient
 
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["--help"]
+CMD ["-V"]
