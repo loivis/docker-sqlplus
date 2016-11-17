@@ -24,4 +24,6 @@ ENV LD_LIBRARY_PATH /opt/instantclient
 ENV PATH /opt/instantclient:$PATH
 ENV SQLPATH /opt/instantclient
 
-CMD sleep 1s; rlwrap sqlplus $URL
+COPY entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["--help"]
