@@ -5,7 +5,7 @@ RUN apt-get -y update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ENV VERSION 12.1.0.2.0
+ENV VERSION 11.2.0.4.0
 
 COPY instantclient-*-${VERSION}.zip /opt/
 
